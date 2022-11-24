@@ -67,8 +67,16 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -85,16 +93,24 @@
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_invoice">
+      <layout class="QVBoxLayout" name="verticalLayout_data">
        <item>
-        <widget class="QLabel" name="label_invoice_file">
+        <widget class="QLabel" name="label_data_file">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="button_invoice">
+        <widget class="QPushButton" name="button_data">
          <property name="acceptDrops">
           <bool>true</bool>
          </property>
@@ -109,8 +125,16 @@
       <layout class="QVBoxLayout" name="verticalLayout_destination">
        <item>
         <widget class="QLabel" name="label_destination_file">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>

@@ -56,6 +56,10 @@ class Ui_Form(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.label_template_file.sizePolicy().hasHeightForWidth())
         self.label_template_file.setSizePolicy(sizePolicy1)
+        font1 = QFont()
+        font1.setPointSize(11)
+        self.label_template_file.setFont(font1)
+        self.label_template_file.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_template.addWidget(self.label_template_file)
 
@@ -68,26 +72,30 @@ class Ui_Form(object):
 
         self.horizontalLayout_selector.addLayout(self.verticalLayout_template)
 
-        self.verticalLayout_invoice = QVBoxLayout()
-        self.verticalLayout_invoice.setObjectName(u"verticalLayout_invoice")
-        self.label_invoice_file = QLabel(Form)
-        self.label_invoice_file.setObjectName(u"label_invoice_file")
+        self.verticalLayout_data = QVBoxLayout()
+        self.verticalLayout_data.setObjectName(u"verticalLayout_data")
+        self.label_data_file = QLabel(Form)
+        self.label_data_file.setObjectName(u"label_data_file")
+        self.label_data_file.setFont(font1)
+        self.label_data_file.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_invoice.addWidget(self.label_invoice_file)
+        self.verticalLayout_data.addWidget(self.label_data_file)
 
-        self.button_invoice = QPushButton(Form)
-        self.button_invoice.setObjectName(u"button_invoice")
-        self.button_invoice.setAcceptDrops(True)
+        self.button_data = QPushButton(Form)
+        self.button_data.setObjectName(u"button_data")
+        self.button_data.setAcceptDrops(True)
 
-        self.verticalLayout_invoice.addWidget(self.button_invoice)
+        self.verticalLayout_data.addWidget(self.button_data)
 
 
-        self.horizontalLayout_selector.addLayout(self.verticalLayout_invoice)
+        self.horizontalLayout_selector.addLayout(self.verticalLayout_data)
 
         self.verticalLayout_destination = QVBoxLayout()
         self.verticalLayout_destination.setObjectName(u"verticalLayout_destination")
         self.label_destination_file = QLabel(Form)
         self.label_destination_file.setObjectName(u"label_destination_file")
+        self.label_destination_file.setFont(font1)
+        self.label_destination_file.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_destination.addWidget(self.label_destination_file)
 
@@ -111,9 +119,9 @@ class Ui_Form(object):
         self.label_ready.setObjectName(u"label_ready")
         sizePolicy1.setHeightForWidth(self.label_ready.sizePolicy().hasHeightForWidth())
         self.label_ready.setSizePolicy(sizePolicy1)
-        font1 = QFont()
-        font1.setPointSize(12)
-        self.label_ready.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(12)
+        self.label_ready.setFont(font2)
         self.label_ready.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout.addWidget(self.label_ready)
@@ -147,8 +155,8 @@ class Ui_Form(object):
         self.label_title.setText(QCoreApplication.translate("Form", u"Invoice generator", None))
         self.label_template_file.setText("")
         self.button_template.setText(QCoreApplication.translate("Form", u"Select template file", None))
-        self.label_invoice_file.setText("")
-        self.button_invoice.setText(QCoreApplication.translate("Form", u"Select data file", None))
+        self.label_data_file.setText("")
+        self.button_data.setText(QCoreApplication.translate("Form", u"Select data file", None))
         self.label_destination_file.setText("")
         self.button_destination.setText(QCoreApplication.translate("Form", u"Select destination file", None))
         self.label_ready.setText(QCoreApplication.translate("Form", u"Everything's set? Click on the \"Generate!\" button below.", None))

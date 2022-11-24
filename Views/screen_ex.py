@@ -7,3 +7,5 @@ class Screen(QWidget, screen.Ui_Form):
         self.setupUi(self)
 
         self.setWindowTitle("Invoice generator")
+
+        self.button_generate.setDisabled(True)
