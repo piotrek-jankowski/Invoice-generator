@@ -1,10 +1,10 @@
-from functools import partial
 import sys
 from pathlib import Path
 from datetime import date
 from PySide6.QtWidgets import QApplication, QFileDialog
 from PySide6.QtCore import QStandardPaths
 from Views.screen_ex import Screen
+from modules import generate_invoice
 
 
 class Invoice_generator:
@@ -23,6 +23,7 @@ class Invoice_generator:
         self.screen_window.button_template.clicked.connect(self.open_file_template)
         self.screen_window.button_data.clicked.connect(self.open_file_data)
         self.screen_window.button_destination.clicked.connect(self.open_file_destination)
+        self.screen_window.button_generate.clicked.connect(self.invoice_generate)
 
     def open_file_template(self):
         template_path = QStandardPaths.writableLocation(QStandardPaths.DocumentsLocation)
@@ -65,6 +66,9 @@ class Invoice_generator:
             self.screen_window.button_generate.setEnabled(True)
         else:
             self.screen_window.button_generate.setDisabled(True)
+
+    def invoice_generate(self):
+        generate_invoice.invoice_generate(self.file_template_path, self.file_data_path, self.file_destination_path)
 
 
 if __name__ == "__main__":
